@@ -1,5 +1,8 @@
-import os,getpass,sys
+import os
+import getpass
+import sys
 from time import sleep
+
 
 class Colors:
     HEADER = '\033[95m'
@@ -9,9 +12,9 @@ class Colors:
     RED = '\033[91m'
     ENDC = '\033[0m'
 
+
 def ubuntu(user_input):
-    zhixing = user_input
-    print(zhixing)
+    zhixing = input('请选择')
     if zhixing == '1':
         print(Colors.YELLOW + "准备安装，等待5秒，按Ctrl+C退出" + Colors.ENDC)
         sleep(5)
@@ -52,18 +55,16 @@ def ubuntu(user_input):
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             else:
                 print(Colors.RED + "输入有误！" + Colors.ENDC)
-    if ubuntu == '4':
+    elif zhixing == '4':
         os.system('fdisk -l && df -h')
-                
-            
+
 
 def main():
     # 使用getpass模块获取有效用户名，即实际运行脚本的用户
-    if getpass.getuser() == 'root':
-        pass
-    else:
+    if getpass.getuser() != 'root':
         print('请使用root权限运行！')
         sys.exit()
+
     menu = '''
  __          __             _______             _      
  \ \        / /            |__   __|           | |     
@@ -77,7 +78,7 @@ def main():
     请选择你现在使用的系统
     1.海纳思系统Ubuntu
     2.Armbian\n'''
-    
+
     info_ubuntu = '''
     1.安装1panel
     2.安装宝塔面板5.9
@@ -89,13 +90,13 @@ def main():
     2.安装宝塔面板5.9
     3.LED灯控制
     4.外部存储管理'''
-    
+
     user_input = input(menu)
-    
+
     if user_input == '1':
         os.system('clear')
         ubuntu_input = input(info_ubuntu)
-        ubuntu(user_input)
+        ubuntu(ubuntu_input)
         # 处理 Ubuntu 相关逻辑
         # ...
     elif user_input == '2':
@@ -107,7 +108,7 @@ def main():
         print('请输入正确的选项！')
         os.system('clear')
         main()  # 递归调用主函数，返回到菜单重新执行
-    
+
 
 if __name__ == '__main__':
     if getpass.getuser() == 'root':
