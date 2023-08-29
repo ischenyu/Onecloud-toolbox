@@ -82,13 +82,13 @@ def main():
     1.安装1panel
     2.安装宝塔面板5.9
     3.LED灯控制
-    4.外部存储管理\n'''
+    4.外部存储管理'''
     
     info_armbian = '''
     1.安装1panel
     2.安装宝塔面板5.9
     3.LED灯控制
-    4.外部存储管理\n'''
+    4.外部存储管理'''
     
     user_input = input(menu)
     
