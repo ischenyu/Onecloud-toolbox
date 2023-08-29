@@ -14,11 +14,11 @@ def ubuntu(user_input):
     print(zhixing)
     if zhixing == '1':
         print(Colors.YELLOW + "准备安装，等待5秒，按Ctrl+C退出" + Colors.ENDC)
-        sleep('5')
+        sleep(5)
         os.system('curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh')
     elif zhixing == '2':
         print(Colors.YELLOW + "准备安装，等待5秒，按Ctrl+C退出" + Colors.ENDC)
-        sleep('5')
+        sleep(5)
         os.system('wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && sudo bash install.sh')
     elif zhixing == '3':
         led = input('请选择要控制的灯   1.红灯 2.绿灯 3.蓝灯')
@@ -82,13 +82,13 @@ def main():
     1.安装1panel
     2.安装宝塔面板5.9
     3.LED灯控制
-    4.外部存储管理'''
+    4.外部存储管理\n'''
     
     info_armbian = '''
     1.安装1panel
     2.安装宝塔面板5.9
     3.LED灯控制
-    4.外部存储管理'''
+    4.外部存储管理\n'''
     
     user_input = input(menu)
     
