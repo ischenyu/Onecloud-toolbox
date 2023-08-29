@@ -14,7 +14,8 @@ class Colors:
 
 
 def ubuntu(user_input):
-    zhixing = input('请选择')
+    #zhixing = input('请选择')
+    zhixing = user_input
     if zhixing == '1':
         print(Colors.YELLOW + "准备安装，等待5秒，按Ctrl+C退出" + Colors.ENDC)
         sleep(5)
@@ -28,30 +29,30 @@ def ubuntu(user_input):
         if led == '1':
             kg = input('1.开 2.关')
             if kg == '1':
-                os.system('chmod 777 led & ./led red 1')
+                os.system('chmod 777 led && ./led red 1')
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             elif kg == '2':
-                os.system('chmod 777 led & ./led red 0')
+                os.system('chmod 777 led && ./led red 0')
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             else:
                 print(Colors.RED + "输入有误！" + Colors.ENDC)
         elif led == '2':
             kg = input('1.开 2.关')
             if kg == '1':
-                os.system('chmod 777 led & ./led green 1')
+                os.system('chmod 777 led && ./led green 1')
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             elif kg == '2':
-                os.system('chmod 777 led & ./led green 0')
+                os.system('chmod 777 led && ./led green 0')
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             else:
                 print(Colors.RED + "输入有误！" + Colors.ENDC)
         elif led == '3':
             kg = input('1.开 2.关')
             if kg == '1':
-                os.system('chmod 777 led & ./led blue 1')
+                os.system('chmod 777 led && ./led blue 1')
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             elif kg == '2':
-                os.system('chmod 777 led & ./led blue 0')
+                os.system('chmod 777 led && ./led blue 0')
                 print(Colors.GREEN + "完成" + Colors.ENDC)
             else:
                 print(Colors.RED + "输入有误！" + Colors.ENDC)
